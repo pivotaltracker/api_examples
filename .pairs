@@ -1,0 +1,32 @@
+# This file is managed by chef! Override node.default["git_pairs_authors"] in attributes/git_pairs.rb to modify.
+
+pairs:
+  an: Andy Niccolai; aniccolai
+  ak: Ashton Kemerling; akemerling
+  ba: Byron Anderson; banderson
+  caw: Chad Woolley; cwoolley
+  ci: Jenkins; ci
+  ct: Chris Tong; ctong
+  dp: Dan Podsedly; dan
+  dmp: David Poore; dpoore
+  dm: Drew McKinney; amckinney
+  gi: Glen Ivey; givey
+  go: Glenn Oppegard; goppegard
+  jt: Jeff Turley; jturley
+  jb: Josh Bourgeois; jbourgeois
+  lc: Lisa Crispin; lcrispin
+  mm: Mark Michael; mmichael
+  jc: JoEllen Carter; jcarter
+  mh: Matt Heidemann; mheidemann
+  ns: Nick Seemiller; nseemiller
+  mw: Morgan Whitney; mwhitney
+  mce: Matthew Conger-Eldeen; mcongereldeen
+  thewoolleyman: Chad Woolley; thewoolleyman
+  to: Thomas Osugi; tosugi
+email:
+  prefix: pair
+  domain: pivotal.io
+email_addresses:
+  thewoolleyman: thewoolleyman@gmail.com
+
+global: false
