@@ -12,5 +12,7 @@ Next, the script shows how to look up the story name and type, then drop release
 
 To run the script, set environment variables for your Tracker API TOKEN (https://www.pivotaltracker.com/help/api#Basics) and PROJECT_ID. Depending on the size of your project, it can take a few minutes to run, so be patient. 
 
-Note that if any stories that were accepted in your project were subsequently deleted or moved to another project, the report will show “deleted” instead of the story name. Since you can only retrieve the last six months of activity, the script can’t calculate cycle time for stories that were started more than six months ago. Also note, it is possible in Tracker to put a story directly into a different active state than ‘started’, for example, a story could go directly from the unstarted to the finished state. This script won’t compute cycle times for those, but of course, you can write your own script to accommodate those differences.
+ * Note that if any stories that were accepted in your project were subsequently deleted or moved to another project, the report will show “deleted” instead of the story name. 
+ * Since you can only retrieve the last six months of activity, the script can’t calculate cycle time for stories that were started more than six months ago. 
+ * It is possible in Tracker to put a story directly into a different active state than ‘started’, for example, a story could go directly from the unstarted to the finished state. This script won’t compute cycle times for those, but of course, you can write your own script to accommodate those differences.
 
