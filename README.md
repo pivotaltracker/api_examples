@@ -1,6 +1,6 @@
 # api_examples
 
-This repository is a collection of example queries for the Pivotal Tracker v5 API formatted for the Postman rest client.
+This repository contains example scripts showing how to use Tracker's API to get information not readily available via the Tracker application.
 
 The Pivotal Tracker v5 API is documented here -- http://www.pivotaltracker.com/help/api/rest/v5
 
