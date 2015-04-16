@@ -45,7 +45,7 @@ class CycleTimeForAcceptedStories
 
       activity_items.each do |activity|
         count+=1
-        puts "still working" if (count + 1) % 100 == 0  
+        STDERR.print ". " if (count + 1) % 100 == 0
         activity['changes'].each do |change_info|
           if is_state_change(change_info)
             story_id = change_info['id']
@@ -68,6 +68,7 @@ class CycleTimeForAcceptedStories
 
       offset += activity_with_envelope['pagination']['limit']
     end while total > offset
+    STDERR.puts ""
 
     # look up name and type for ech story
     stories.keys.each_slice(100) do |story_ids|

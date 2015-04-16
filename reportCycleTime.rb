@@ -37,6 +37,7 @@ class CycleTimeForAcceptedStories
     offset = 0
     limit = 100
     total = nil
+    count = 0
     begin
       activity_with_envelope = get("projects/#{@@project_id}/activity", "offset=#{offset}&envelope=true")
       activity_items = activity_with_envelope['data']
@@ -44,6 +45,8 @@ class CycleTimeForAcceptedStories
 
       activity_items.each do |activity|
         activity['changes'].each do |change_info|
+          count+=1
+          STDERR.print ". " if (count + 1) % 100 == 0
           if is_state_change(change_info)
             story_id = change_info['id']
             stories[story_id] ||= {}
@@ -60,6 +63,7 @@ class CycleTimeForAcceptedStories
 
       offset += activity_with_envelope['pagination']['limit']
     end while total > offset
+    STDERR.puts ""
 
     # look up name and type for each story
     stories.keys.each_slice(100) do |story_ids|
